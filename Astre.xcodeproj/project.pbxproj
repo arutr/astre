@@ -49,6 +49,7 @@
 		768EE9EC23F70FF600DCC3A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		768EE9F723F710AA00DCC3A7 /* libxcb.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxcb.1.dylib; path = ../../../opt/X11/lib/libxcb.1.dylib; sourceTree = "<group>"; };
 		768EE9FB23F726CA00DCC3A7 /* ProjectManager */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ProjectManager; sourceTree = "<group>"; };
+		CED4280530416B473DF83ED4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 				768EE9EA23F70FF600DCC3A7 /* Products */,
 				768EE9FB23F726CA00DCC3A7 /* ProjectManager */,
 				768EE9F623F710AA00DCC3A7 /* Frameworks */,
+				CED4280530416B473DF83ED4 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
