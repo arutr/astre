@@ -1,0 +1,4 @@
+module Clibxcb [system] {
+    header "/usr/X11/include/xcb/xcb.h"
+    export *
+}

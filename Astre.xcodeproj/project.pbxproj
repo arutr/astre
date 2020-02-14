@@ -3,28 +3,52 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7605BE5B23F728DB00022A2E /* ConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605BE5A23F728DB00022A2E /* ConnectionDelegate.swift */; };
+		7605BE5E23F7290300022A2E /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605BE5D23F7290300022A2E /* Connection.swift */; };
+		7605BF5023F7330900022A2E /* CompositeWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605BF4F23F7330900022A2E /* CompositeWindow.swift */; };
+		7605BF5223F7331300022A2E /* ManagedWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605BF5123F7331200022A2E /* ManagedWindow.swift */; };
+		7605BF5423F7331800022A2E /* DecorationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7605BF5323F7331800022A2E /* DecorationWindow.swift */; };
 		768EE9ED23F70FF600DCC3A7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768EE9EC23F70FF600DCC3A7 /* main.swift */; };
+		768EE9F823F710AA00DCC3A7 /* libxcb.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 768EE9F723F710AA00DCC3A7 /* libxcb.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		768EE9E723F70FF600DCC3A7 /* CopyFiles */ = {
+		768EE9E723F70FF600DCC3A7 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		768EE9FA23F710AA00DCC3A7 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7605BE5A23F728DB00022A2E /* ConnectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionDelegate.swift; sourceTree = "<group>"; };
+		7605BE5D23F7290300022A2E /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		7605BF4F23F7330900022A2E /* CompositeWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeWindow.swift; sourceTree = "<group>"; };
+		7605BF5123F7331200022A2E /* ManagedWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedWindow.swift; sourceTree = "<group>"; };
+		7605BF5323F7331800022A2E /* DecorationWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecorationWindow.swift; sourceTree = "<group>"; };
 		768EE9E923F70FF600DCC3A7 /* Astre */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Astre; sourceTree = BUILT_PRODUCTS_DIR; };
 		768EE9EC23F70FF600DCC3A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		768EE9F723F710AA00DCC3A7 /* libxcb.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxcb.1.dylib; path = ../../../opt/X11/lib/libxcb.1.dylib; sourceTree = "<group>"; };
+		768EE9FB23F726CA00DCC3A7 /* ProjectManager */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ProjectManager; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +56,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768EE9F823F710AA00DCC3A7 /* libxcb.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7605BE5C23F728F200022A2E /* XCBKit */ = {
+			isa = PBXGroup;
+			children = (
+				7605BE5D23F7290300022A2E /* Connection.swift */,
+			);
+			path = XCBKit;
+			sourceTree = "<group>";
+		};
 		768EE9E023F70FF600DCC3A7 = {
 			isa = PBXGroup;
 			children = (
 				768EE9EB23F70FF600DCC3A7 /* Astre */,
 				768EE9EA23F70FF600DCC3A7 /* Products */,
+				768EE9FB23F726CA00DCC3A7 /* ProjectManager */,
+				768EE9F623F710AA00DCC3A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +92,22 @@
 		768EE9EB23F70FF600DCC3A7 /* Astre */ = {
 			isa = PBXGroup;
 			children = (
+				7605BE5C23F728F200022A2E /* XCBKit */,
 				768EE9EC23F70FF600DCC3A7 /* main.swift */,
+				7605BE5A23F728DB00022A2E /* ConnectionDelegate.swift */,
+				7605BF4F23F7330900022A2E /* CompositeWindow.swift */,
+				7605BF5123F7331200022A2E /* ManagedWindow.swift */,
+				7605BF5323F7331800022A2E /* DecorationWindow.swift */,
 			);
 			path = Astre;
+			sourceTree = "<group>";
+		};
+		768EE9F623F710AA00DCC3A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				768EE9F723F710AA00DCC3A7 /* libxcb.1.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,7 +119,8 @@
 			buildPhases = (
 				768EE9E523F70FF600DCC3A7 /* Sources */,
 				768EE9E623F70FF600DCC3A7 /* Frameworks */,
-				768EE9E723F70FF600DCC3A7 /* CopyFiles */,
+				768EE9E723F70FF600DCC3A7 /* Copy Files */,
+				768EE9FA23F710AA00DCC3A7 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -94,11 +143,12 @@
 				TargetAttributes = {
 					768EE9E823F70FF600DCC3A7 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
 			buildConfigurationList = 768EE9E423F70FF600DCC3A7 /* Build configuration list for PBXProject "Astre" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -121,6 +171,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				768EE9ED23F70FF600DCC3A7 /* main.swift in Sources */,
+				7605BE5B23F728DB00022A2E /* ConnectionDelegate.swift in Sources */,
+				7605BF5223F7331300022A2E /* ManagedWindow.swift in Sources */,
+				7605BE5E23F7290300022A2E /* Connection.swift in Sources */,
+				7605BF5423F7331800022A2E /* DecorationWindow.swift in Sources */,
+				7605BF5023F7330900022A2E /* CompositeWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,8 +298,24 @@
 		768EE9F123F70FF600DCC3A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/X11/include;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/X11/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Clibxcb";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -252,8 +323,23 @@
 		768EE9F223F70FF600DCC3A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/X11/include;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/X11/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Clibxcb";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
